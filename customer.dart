@@ -69,5 +69,11 @@ var customer = <Customer>[
 ];
 
 main() {
-  customer.forEach(print);
+ // Restrication Operator (where operator)
+  var whereResult = customer.where((c) => c.age < 15);
+  whereResult.forEach(print); // forEach loop to check all the list
+
+  // Projection Operator (map)
+  var projResult = customer.map((e) => e.address);
+  projResult.forEach((print));
 }
